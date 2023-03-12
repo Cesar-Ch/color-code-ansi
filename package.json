@@ -1,6 +1,6 @@
 {
   "name": "color-code-ansi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -15,5 +15,13 @@
   },
   "eslintConfig": {
     "extends": "standard"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cesar-Ch/color-code-ansi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cesar-Ch/color-code-ansi/issues"
+  },
+  "homepage": "https://github.com/Cesar-Ch/color-code-ansi#readme"
 }
