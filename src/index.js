@@ -10,13 +10,23 @@ class Code {
   }
 
   color (txt) {
-    this.text = colorgraphics.COLORS[txt.toUpperCase()] + this.text + '\x1b[0m'
-    return this
+    if (txt.startsWith('#')) {
+      this.text = `\x1b[38;2;${parseInt(txt.slice(1, 3), 16)};${parseInt(txt.slice(3, 5), 16)};${parseInt(txt.slice(5, 7), 16)}m` + this.text + '\x1b[0m'
+      return this
+    } else {
+      this.text = colorgraphics.COLORS[txt.toUpperCase()] + this.text + '\x1b[0m'
+      return this
+    }
   }
 
   bg (txt) {
-    this.text = colorgraphics.BG_COLORS[txt.toUpperCase()] + this.text + '\x1b[0m'
-    return this
+    if (txt.startsWith('#')) {
+      this.text = `\x1b[48;2;${parseInt(txt.slice(1, 3), 16)};${parseInt(txt.slice(3, 5), 16)};${parseInt(txt.slice(5, 7), 16)}m` + this.text + '\x1b[0m'
+      return this
+    } else {
+      this.text = colorgraphics.BG_COLORS[txt.toUpperCase()] + this.text + '\x1b[0m'
+      return this
+    }
   }
 
   grp (txt) {
@@ -25,7 +35,6 @@ class Code {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
 export function colorCode (text) {
   return new Code(text)
 }

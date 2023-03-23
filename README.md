@@ -3,6 +3,10 @@
 Add color and style to your messages in the Node.js console
 ## Usage
 
+```js
+import { colorCode } from 'color-code-ansi'
+```
+
 ### Colors
 
 - black
@@ -24,7 +28,7 @@ Add color and style to your messages in the Node.js console
 
 ```js
 console.log(colorCode('Hello, World').color('red').end())
-console.log(colorCode('Hello, World').color('brightred').end())
+console.log(colorCode('Hello, World').color('#FF8800').end())
 ```
 ### Backgrounds
 
@@ -47,7 +51,7 @@ console.log(colorCode('Hello, World').color('brightred').end())
 
 ```js
 console.log(colorCode('Hello, World').bg('cyan').end())
-console.log(colorCode('Hello, World').bg('brightcyan').end())
+console.log(colorCode('Hello, World').bg('#00FF77').end())
 ```
 ### Graphics
 
